@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/plugin.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter2/Ex2p1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter2/Ex2p2.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter2/Ex2p3.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter2/Ex2p4.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter2/Ex2p5.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter2/main.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter3/Ex3p1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter3/ListTest.scala" afterDir="false" />
-    </list>
+    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="Functional programming in Scala second edition exercises (until 3.19)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,8 +182,17 @@
       <updated>1692179131541</updated>
       <workItem from="1692179132633" duration="30092000" />
       <workItem from="1692372439845" duration="220000" />
-      <workItem from="1692372701373" duration="48645000" />
+      <workItem from="1692372701373" duration="49007000" />
     </task>
+    <task id="LOCAL-00001" summary="Functional programming in Scala second edition exercises (until 3.19)">
+      <option name="closed" value="true" />
+      <created>1692780986774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692780986774</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,5 +200,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Functional programming in Scala second edition exercises (until 3.19)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functional programming in Scala second edition exercises (until 3.19)" />
   </component>
 </project>
