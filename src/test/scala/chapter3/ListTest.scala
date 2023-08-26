@@ -12,6 +12,9 @@ class ListTest:
   val l: List[Int] = List(1, 2, 3, 4, 5)
   @Test def testTail =
     assertEquals(List(2, 3, 4, 5), tail(l))
+  @Test def testHead =
+    assertEquals(List(1), head(l))
+
   @Test def testInsert =
     assertEquals(List(0, 1, 2, 3, 4, 5),insert(0, l))
   @Test
@@ -108,16 +111,116 @@ class ListTest:
     assertEquals(List("1", "2", "3", "4", "5"), map(List(1, 2, 3, 4, 5), x => x.toString))
     assertEquals(List(2, 3, 4, 5, 6), map(List(1, 2, 3, 4, 5), a => a+1))
     assertEquals(List(1, 4, 9, 16, 25), map(List(1, 2, 3, 4, 5), a => Math.pow(a,2)))
+    assertEquals(List(List(1,1), List(2,2), List(3,3)), map(List(1, 2, 3), i=>List(i,i)))
 
   @Test
   def testFilter =
     assertEquals(List(2, 3, 4, 5), filter(List(1, 2, 3, 4, 5), a => a>1))
 
   @Test
-  def testFilter =
-    assertEquals(List(2, 3, 4, 5), filter(List(1, 2, 3, 4, 5), a => a > 1))
+  def testFlatMap =
+    assertEquals(List(1,1,2,2,3,3), flatMap(List(1, 2, 3), i => List(i,i)))
 
+  @Test
+  def testFlatMap2 =
+    assertEquals(List(1, 1, 2, 2, 3, 3), flatMap2(List(1, 2, 3), i => List(i, i)))
+  @Test
+  def testFilter2 =
+    assertEquals(List(2, 3, 4, 5), filter2(List(1, 2, 3, 4, 5), a => a > 1))
+  @Test
+  def testAddPairWise1 =
+    assertEquals(List(5, 7, 9), addPairWise1(List(1,2,3), List(4,5,6) ))
+    assertEquals(List(4, 5, 6), addPairWise1(Nil, List(4,5,6) ))
+    assertEquals(List(5, 7, 6), addPairWise1(List(1,2), List(4, 5, 6)))
+    assertEquals(Nil, addPairWise1(Nil, Nil ))
+  @Test
+  def testAddPairWise2 =
+    assertEquals(List(5, 7, 9), addPairWise2(List(1, 2, 3), List(4, 5, 6)))
+    assertEquals(List(5, 7, 6), addPairWise2(List(1,2), List(4, 5, 6)))
+    assertEquals(Nil, addPairWise2(Nil, List(4,5,6) ))
+  @Test
+  def testCombine =
+    assertEquals(List(5, 7, 9), combine(List(1,2,3), List(4,5,6), _+_))
+    assertEquals(List(4, 5, 6), combine(Nil, List(4,5,6), _+_))
+  @Test
+  def testZipWith =
+    //assertEquals(List(5, 7, 9), combine2(List(1, 2, 3), List(4, 5, 6), _ + _))
+    assertEquals(List(5, 7), zipWith(List(1, 2), List(4, 5, 6), _ + _))
+
+  @Test
+  def testZipWithTr =
+  //assertEquals(List(5, 7, 9), combine2(List(1, 2, 3), List(4, 5, 6), _ + _))
+    assertEquals(List(5, 7), zipWithTr(List(1, 2), List(4, 5, 6), _ + _))
   @Test
   def testMyDelete =
     assertEquals(List(1, 2, 4, 5), myDelete(l, _ == 3))
     assertEquals(List(1, 2, 3), myDelete(l, _ > 3))
+
+  @Test
+  def testHasSubSequence =
+    assertEquals(true, hasSubSequence(List(1,2,3,4,5), List(1,2,3,4,5)))
+    assertEquals(true, hasSubSequence(List(1,2,3,4,5), List(2,3)))
+    assertEquals(false, hasSubSequence(List(1,2,3,4,5), List(6,7,8)))
+    assertEquals(false, hasSubSequence(List(1,2,3,4,5), Nil))
+    assertEquals(false, hasSubSequence(List(1,2), List(1,2,3,4,5)))
+    assertEquals(false, hasSubSequence(Nil, List(1,2,3,4,5)))
+    assertEquals(false, hasSubSequence(List(1), List(2)))
+    assertEquals(true, hasSubSequence(List(1), List(1)))
+    assertEquals(true, hasSubSequence(List(1,2,1), List(1)))
+    assertEquals(true, hasSubSequence(List(0,0,1), List(1)))
+    assertEquals(true, hasSubSequence(List(1,1,1), List(1)))
+    assertEquals(false, hasSubSequence(Nil, Nil))
+
+  @Test
+  def testHasSubSequenceBook =
+    assertEquals(true, hasSubSequenceBook(List(1, 2, 3, 4, 5), List(1, 2, 3, 4, 5)))
+    assertEquals(true, hasSubSequenceBook(List(1, 2, 3, 4, 5), List(2, 3)))
+    assertEquals(false, hasSubSequenceBook(List(1, 2, 3, 4, 5), List(6, 7, 8)))
+//    assertEquals(false, hasSubSequenceBook(List(1, 2, 3, 4, 5), Nil))
+    assertEquals(false, hasSubSequenceBook(List(1, 2), List(1, 2, 3, 4, 5)))
+    assertEquals(false, hasSubSequenceBook(Nil, List(1, 2, 3, 4, 5)))
+    assertEquals(false, hasSubSequenceBook(List(1), List(2)))
+    assertEquals(true, hasSubSequenceBook(List(1), List(1)))
+    assertEquals(true, hasSubSequenceBook(List(1, 2, 1), List(1)))
+    assertEquals(true, hasSubSequenceBook(List(0, 0, 1), List(1)))
+    assertEquals(true, hasSubSequenceBook(List(1, 1, 1), List(1)))
+    //assertEquals(false, hasSubSequenceBook(Nil, Nil))
+
+  @Test
+  def testTake =
+    assertEquals(List(1, 2), take(l, 2))
+  @Test
+  def testTakeWhile =
+    assertEquals(List(1,2,3), takeWhile(l, _<4) )
+  @Test
+  def testForAll1 =
+    assertEquals(true, forAll1(List(1,2,3),_>0))
+    assertEquals(false, forAll1(List(1,2,3),_>2))
+  @Test
+  def testForAll2 =
+    assertEquals(true, forAll2(List(1, 2, 3), _ > 0))
+    assertEquals(false, forAll2(List(1, 2, 3), _ > 2))
+  @Test
+  def testForAllTr =
+    assertEquals(true, forAllTr(List(1, 2, 3), _ > 0))
+    assertEquals(false, forAllTr(List(1, 2, 3), _ > 2))
+  @Test
+  def testExists1 =
+    assertEquals(true, exists1(List(1, 2, 3), _ > 1))
+    assertEquals(true, exists1(List(1, 2, 3), _ > 0))
+    assertEquals(true, exists1(List(1, 2, 3), _ == 2))
+    assertEquals(false, exists1(List(1, 2, 3), _ > 3))
+
+  @Test
+  def testExists2 =
+    assertEquals(true, exists2(List(1, 2, 3), _ > 1))
+    assertEquals(true, exists2(List(1, 2, 3), _ > 0))
+    assertEquals(true, exists2(List(1, 2, 3), _ == 2))
+    assertEquals(false, exists2(List(1, 2, 3), _ > 3))
+
+  @Test
+  def testExists =
+    assertEquals(true, exists(List(1, 2, 3), _ > 1))
+    assertEquals(true, exists(List(1, 2, 3), _ > 0))
+    assertEquals(true, exists(List(1, 2, 3), _ == 2))
+    assertEquals(false, exists(List(1, 2, 3), _ > 3))
