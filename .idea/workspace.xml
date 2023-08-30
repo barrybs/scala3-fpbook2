@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="Functional programming in Scala second edition exercises (until 3.19)">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter3/Tree.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter3/TreeTest.scala" afterDir="false" />
+    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter4/Option.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter4/OptionTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/chapter3/ListTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/chapter3/ListTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Package Object" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,6 +35,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2U3rVePB3pFYQ2kuv8pmvXHLDUb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,8 +57,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +69,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4632184",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -75,94 +80,96 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+      <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="chapter3" />
       <recent name="chapter2" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="chapter4" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TreeTest.testMaximumF">
-    <configuration name="TreeTest.testDepthF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OptionTest.testMap2v2">
+    <configuration name="OptionTest.map2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter3.*" />
+          <option name="PATTERN" value="chapter4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter3" />
-      <option name="MAIN_CLASS_NAME" value="chapter3.TreeTest" />
-      <option name="METHOD_NAME" value="testDepthF" />
+      <option name="PACKAGE_NAME" value="chapter4" />
+      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
+      <option name="METHOD_NAME" value="map2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTest.testMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptionTest.testFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter3.*" />
+          <option name="PATTERN" value="chapter4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter3" />
-      <option name="MAIN_CLASS_NAME" value="chapter3.TreeTest" />
-      <option name="METHOD_NAME" value="testMap" />
+      <option name="PACKAGE_NAME" value="chapter4" />
+      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
+      <option name="METHOD_NAME" value="testFilter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTest.testMapF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptionTest.testMap2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter3.*" />
+          <option name="PATTERN" value="chapter4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter3" />
-      <option name="MAIN_CLASS_NAME" value="chapter3.TreeTest" />
-      <option name="METHOD_NAME" value="testMapF" />
+      <option name="PACKAGE_NAME" value="chapter4" />
+      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
+      <option name="METHOD_NAME" value="testMap2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTest.testMaximumF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptionTest.testMap2v2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter3.*" />
+          <option name="PATTERN" value="chapter4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter3" />
-      <option name="MAIN_CLASS_NAME" value="chapter3.TreeTest" />
-      <option name="METHOD_NAME" value="testMaximumF" />
+      <option name="PACKAGE_NAME" value="chapter4" />
+      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
+      <option name="METHOD_NAME" value="testMap2v2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTest.testSizeF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptionTest.testVariance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter3.*" />
+          <option name="PATTERN" value="chapter4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter3" />
-      <option name="MAIN_CLASS_NAME" value="chapter3.TreeTest" />
-      <option name="METHOD_NAME" value="testSizeF" />
+      <option name="PACKAGE_NAME" value="chapter4" />
+      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
+      <option name="METHOD_NAME" value="testVariance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TreeTest.testMaximumF" />
-        <item itemvalue="JUnit.TreeTest.testMapF" />
-        <item itemvalue="JUnit.TreeTest.testDepthF" />
-        <item itemvalue="JUnit.TreeTest.testMap" />
-        <item itemvalue="JUnit.TreeTest.testSizeF" />
+        <item itemvalue="JUnit.OptionTest.testMap2v2" />
+        <item itemvalue="JUnit.OptionTest.testMap2" />
+        <item itemvalue="JUnit.OptionTest.map2" />
+        <item itemvalue="JUnit.OptionTest.testVariance" />
+        <item itemvalue="JUnit.OptionTest.testFilter" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +195,9 @@
       <updated>1692179131541</updated>
       <workItem from="1692179132633" duration="30092000" />
       <workItem from="1692372439845" duration="220000" />
-      <workItem from="1692372701373" duration="106588000" />
+      <workItem from="1692372701373" duration="132660000" />
+      <workItem from="1693392606557" duration="2000" />
+      <workItem from="1693406947755" duration="7197000" />
     </task>
     <task id="LOCAL-00001" summary="Functional programming in Scala second edition exercises (until 3.19)">
       <option name="closed" value="true" />
@@ -206,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692781066062</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees">
+      <option name="closed" value="true" />
+      <created>1693042963768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693042963768</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +232,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Functional programming in Scala second edition exercises (until 3.19)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Functional programming in Scala second edition exercises (until 3.19)" />
+    <MESSAGE value="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees" />
   </component>
 </project>

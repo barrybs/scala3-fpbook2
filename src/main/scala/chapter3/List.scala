@@ -239,4 +239,3 @@ import scala.annotation.tailrec
       case Nil => sub == Nil
       case _ if startsWith(sup, sub) => true
       case Cons(h,t) => hasSubSequenceBook(t, sub)
-
