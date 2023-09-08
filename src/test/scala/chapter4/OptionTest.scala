@@ -1,8 +1,7 @@
 package chapter4
 
+import scala.collection.immutable.List
 import chapter4.Option.*
-import chapter3.List.*
-import scala.List
 import org.junit.*
 import org.junit.Assert.*
 
@@ -57,6 +56,10 @@ class OptionTest:
     assertEquals(None, map2v2(optInt, None)((x: Int, y: Int) => x + y))
     assertEquals(None, map2v2(None, optInt)((x: Int, y: Int) => x + y))
 
+  /*
   @Test
   def testSequence =
-    assertEquals(Some(3), map2v2(optInt, optInt2)((x, y) => x + y))
+    assertEquals(Some(List(1,2,3,4,5)), sequence(List(Some(1),Some(2),Some(3),Some(4),Some(5))))
+    assertEquals(None, sequence(List(Some(1),None,Some(3),Some(4),Some(5))))
+
+  */

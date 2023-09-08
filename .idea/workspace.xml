@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter4/Option.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter4/OptionTest.scala" afterDir="false" />
+    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter5/LazyList.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter5/LazyListTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter4/Option.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter4/Option.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/chapter4/OptionTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/chapter4/OptionTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Package Object" />
         <option value="Class" />
+        <option value="Package Object" />
       </list>
     </option>
   </component>
@@ -69,7 +70,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4632184",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -94,82 +95,81 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OptionTest.testMap2v2">
-    <configuration name="OptionTest.map2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LazyListTest">
+    <configuration name="LazyListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter4.*" />
+          <option name="PATTERN" value="chapter5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter4" />
-      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
-      <option name="METHOD_NAME" value="map2" />
+      <option name="PACKAGE_NAME" value="chapter5" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LazyListTest.testDrop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scala3-fpbook2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter5" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
+      <option name="METHOD_NAME" value="testDrop" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OptionTest.testFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LazyListTest.testTake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter4.*" />
+          <option name="PATTERN" value="chapter5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter4" />
-      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
-      <option name="METHOD_NAME" value="testFilter" />
+      <option name="PACKAGE_NAME" value="chapter5" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
+      <option name="METHOD_NAME" value="testTake" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OptionTest.testMap2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LazyListTest.testTakeTR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter4.*" />
+          <option name="PATTERN" value="chapter5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter4" />
-      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
-      <option name="METHOD_NAME" value="testMap2" />
+      <option name="PACKAGE_NAME" value="chapter5" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
+      <option name="METHOD_NAME" value="testTakeTR" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OptionTest.testMap2v2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LazyListTest.testTakeWhile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter4.*" />
+          <option name="PATTERN" value="chapter5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter4" />
-      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
-      <option name="METHOD_NAME" value="testMap2v2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OptionTest.testVariance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="scala3-fpbook2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter4" />
-      <option name="MAIN_CLASS_NAME" value="chapter4.OptionTest" />
-      <option name="METHOD_NAME" value="testVariance" />
+      <option name="PACKAGE_NAME" value="chapter5" />
+      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
+      <option name="METHOD_NAME" value="testTakeWhile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OptionTest.testMap2v2" />
-        <item itemvalue="JUnit.OptionTest.testMap2" />
-        <item itemvalue="JUnit.OptionTest.map2" />
-        <item itemvalue="JUnit.OptionTest.testVariance" />
-        <item itemvalue="JUnit.OptionTest.testFilter" />
+        <item itemvalue="JUnit.LazyListTest" />
+        <item itemvalue="JUnit.LazyListTest.testTake" />
+        <item itemvalue="JUnit.LazyListTest.testTakeWhile" />
+        <item itemvalue="JUnit.LazyListTest.testDrop" />
+        <item itemvalue="JUnit.LazyListTest.testTakeTR" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +197,8 @@
       <workItem from="1692372439845" duration="220000" />
       <workItem from="1692372701373" duration="132660000" />
       <workItem from="1693392606557" duration="2000" />
-      <workItem from="1693406947755" duration="7197000" />
+      <workItem from="1693406947755" duration="23308000" />
+      <workItem from="1693946201451" duration="13209000" />
     </task>
     <task id="LOCAL-00001" summary="Functional programming in Scala second edition exercises (until 3.19)">
       <option name="closed" value="true" />
@@ -223,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693042963768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option">
+      <option name="closed" value="true" />
+      <created>1693422873760</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693422873760</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +242,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Functional programming in Scala second edition exercises (until 3.19)" />
     <MESSAGE value="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees" />
+    <MESSAGE value="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option" />
   </component>
 </project>

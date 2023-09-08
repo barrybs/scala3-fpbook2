@@ -1,4 +1,7 @@
 package chapter4
+import scala.List
+
+
   enum Option[+A]:
     case Some(get: A)
     case None
@@ -63,9 +66,11 @@ package chapter4
       a.flatMap(aa => b.map(bb => f(aa,bb)))
 
     //Ex 4.4
-    def sequence[A](as: List[Option[A]]): Option[List[A]] =
-      foldRight(as, None, (a) => if Some(a) then  ))
+/*    def sequence[A](as: List[Option[A]]): Option[List[A]] =
+      foldRight(as, Some(Nil:List[Option[A]]):Option[List[A]],(x, acc) => map2(x,acc)(Cons(_, _)))
+      //case Cons(x,xs) if x != None => Some(Cons(x,sequence(xs)))
 
+ */
 
 /*
     def map[B](f: A => B): Option[B] = this match
