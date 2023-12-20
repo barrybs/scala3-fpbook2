@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter5/LazyList.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter5/LazyListTest.scala" afterDir="false" />
+    <list default="true" id="449e277f-519a-4242-bf52-d9bde7542e53" name="Changes" comment="(Book exercises) Functional programming in Scala second edition (until 5.3)&#10;LazyList">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter10/Monoids.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter5/LazyListF.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter10/MonoidsTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/chapter5/LazyListFTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter4/Option.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter4/Option.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/plugin.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/project/plugin.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter3/List.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter5/LazyList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter5/LazyList.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/chapter3/ListTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/chapter3/ListTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/chapter4/OptionTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/chapter4/OptionTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/chapter5/LazyListTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/chapter5/LazyListTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +33,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Package Object" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,6 +59,8 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ListTest.testForAllFl.executor": "Run",
+    "JUnit.ListTest.testForAllFr.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -62,19 +72,24 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/barrybassi/IdeaProjects/scala3-fpbook2/src/main/scala/chapter5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4632184",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm",
+    "settings.editor.selected.configurable": "com.obiscr.chatgpt.settings.OpenAISettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/scala/chapter5" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/scala/chapter2" />
       <recent name="$PROJECT_DIR$/src/lib" />
@@ -88,88 +103,91 @@
       <recent name="chapter2" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="chapter10" />
       <recent name="chapter4" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="chapter5" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LazyListTest">
-    <configuration name="LazyListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ListTest.testForAllFl">
+    <configuration name="ListTest.testForAllFl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter5.*" />
+          <option name="PATTERN" value="chapter3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter5" />
-      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LazyListTest.testDrop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="scala3-fpbook2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chapter5" />
-      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
-      <option name="METHOD_NAME" value="testDrop" />
+      <option name="PACKAGE_NAME" value="chapter3" />
+      <option name="MAIN_CLASS_NAME" value="chapter3.ListTest" />
+      <option name="METHOD_NAME" value="testForAllFl" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LazyListTest.testTake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ListTest.testForAllFr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter5.*" />
+          <option name="PATTERN" value="chapter3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter5" />
-      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
-      <option name="METHOD_NAME" value="testTake" />
+      <option name="PACKAGE_NAME" value="chapter3" />
+      <option name="MAIN_CLASS_NAME" value="chapter3.ListTest" />
+      <option name="METHOD_NAME" value="testForAllFr" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LazyListTest.testTakeTR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonoidsTest.testEndoMonoid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter5.*" />
+          <option name="PATTERN" value="chapter10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter5" />
-      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
-      <option name="METHOD_NAME" value="testTakeTR" />
+      <option name="PACKAGE_NAME" value="chapter10" />
+      <option name="MAIN_CLASS_NAME" value="chapter10.MonoidsTest" />
+      <option name="METHOD_NAME" value="testEndoMonoid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LazyListTest.testTakeWhile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonoidsTest.testIntAdditionMonoid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala3-fpbook2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter5.*" />
+          <option name="PATTERN" value="chapter10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chapter5" />
-      <option name="MAIN_CLASS_NAME" value="chapter5.LazyListTest" />
-      <option name="METHOD_NAME" value="testTakeWhile" />
+      <option name="PACKAGE_NAME" value="chapter10" />
+      <option name="MAIN_CLASS_NAME" value="chapter10.MonoidsTest" />
+      <option name="METHOD_NAME" value="testIntAdditionMonoid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonoidsTest.testOptionMonoid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scala3-fpbook2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter10" />
+      <option name="MAIN_CLASS_NAME" value="chapter10.MonoidsTest" />
+      <option name="METHOD_NAME" value="testOptionMonoid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LazyListTest" />
-        <item itemvalue="JUnit.LazyListTest.testTake" />
-        <item itemvalue="JUnit.LazyListTest.testTakeWhile" />
-        <item itemvalue="JUnit.LazyListTest.testDrop" />
-        <item itemvalue="JUnit.LazyListTest.testTakeTR" />
+        <item itemvalue="JUnit.ListTest.testForAllFl" />
+        <item itemvalue="JUnit.ListTest.testForAllFr" />
+        <item itemvalue="JUnit.MonoidsTest.testOptionMonoid" />
+        <item itemvalue="JUnit.MonoidsTest.testIntAdditionMonoid" />
+        <item itemvalue="JUnit.MonoidsTest.testEndoMonoid" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +216,37 @@
       <workItem from="1692372701373" duration="132660000" />
       <workItem from="1693392606557" duration="2000" />
       <workItem from="1693406947755" duration="23308000" />
-      <workItem from="1693946201451" duration="13209000" />
+      <workItem from="1693946201451" duration="31728000" />
+      <workItem from="1694248135007" duration="601000" />
+      <workItem from="1694251572385" duration="43523000" />
+      <workItem from="1694629458548" duration="61000" />
+      <workItem from="1694629549088" duration="14559000" />
+      <workItem from="1694886332836" duration="695000" />
+      <workItem from="1694888272465" duration="10169000" />
+      <workItem from="1695497467361" duration="12325000" />
+      <workItem from="1696069143870" duration="5111000" />
+      <workItem from="1696776537204" duration="597000" />
+      <workItem from="1696846352185" duration="6973000" />
+      <workItem from="1696882377943" duration="2729000" />
+      <workItem from="1696968068859" duration="1283000" />
+      <workItem from="1697106949621" duration="2485000" />
+      <workItem from="1697573004484" duration="3559000" />
+      <workItem from="1698352855226" duration="87000" />
+      <workItem from="1698352978800" duration="882000" />
+      <workItem from="1698870427885" duration="764000" />
+      <workItem from="1699299135203" duration="6592000" />
+      <workItem from="1699433691389" duration="4131000" />
+      <workItem from="1699565551189" duration="2440000" />
+      <workItem from="1699640512212" duration="343000" />
+      <workItem from="1699822226376" duration="1344000" />
+      <workItem from="1699979207933" duration="2593000" />
+      <workItem from="1700907070838" duration="1184000" />
+      <workItem from="1701378462937" duration="4171000" />
+      <workItem from="1701555948721" duration="598000" />
+      <workItem from="1702416959655" duration="7982000" />
+      <workItem from="1702721854495" duration="1205000" />
+      <workItem from="1702811009393" duration="7000" />
+      <workItem from="1702822752506" duration="4462000" />
     </task>
     <task id="LOCAL-00001" summary="Functional programming in Scala second edition exercises (until 3.19)">
       <option name="closed" value="true" />
@@ -232,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693422873760</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="(Book exercises) Functional programming in Scala second edition (until 5.3)&#10;LazyList">
+      <option name="closed" value="true" />
+      <created>1694164302504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694164302504</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +299,11 @@
     <MESSAGE value="Functional programming in Scala second edition exercises (until 3.19)" />
     <MESSAGE value="(Book exercises) Functional programming in Scala second edition (until 3.28)&#10;List and Trees" />
     <MESSAGE value="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Book exercises) Functional programming in Scala second edition (until 4.4)&#10;Option" />
+    <MESSAGE value="(Book exercises) Functional programming in Scala second edition (until 5.3)&#10;LazyList" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Book exercises) Functional programming in Scala second edition (until 5.3)&#10;LazyList" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

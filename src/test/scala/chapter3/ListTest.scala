@@ -204,6 +204,15 @@ class ListTest:
   def testForAllTr =
     assertEquals(true, forAllTr(List(1, 2, 3), _ > 0))
     assertEquals(false, forAllTr(List(1, 2, 3), _ > 2))
+
+  @Test
+  def testForAllFr =
+    assertEquals(true, forAllFr(List(1, 2, 3), _ > 0))
+    assertEquals(false, forAllFr(List(1, 2, 3), _ > 2))
+  @Test
+  def testForAllFl =
+    assertEquals(true, forAllFl(List(1, 2, 3), _ > 0))
+    assertEquals(false, forAllFl(List(1, 2, 3), _ > 2))
   @Test
   def testExists1 =
     assertEquals(true, exists1(List(1, 2, 3), _ > 1))
@@ -224,3 +233,19 @@ class ListTest:
     assertEquals(true, exists(List(1, 2, 3), _ > 0))
     assertEquals(true, exists(List(1, 2, 3), _ == 2))
     assertEquals(false, exists(List(1, 2, 3), _ > 3))
+
+  @Test
+  def testZipRight(): Unit =
+    assertEquals(List( ("zero", 0), ("uno", 1), ("due", 2), ("tre", 3), ("quattro", 4)), zipRight(List("zero","uno","due","tre","quattro")))
+
+  @Test
+  def testMean() =
+    assertEquals(2.5, mean(List(1.0,2.0,3.0,4.0)),0)
+
+  @Test
+  def testMaxInt() =
+    assertEquals(23, maxInt(List(1, 16, 4, 0, 23, 9)), 0)
+
+  @Test
+  def testMaxFl() =
+    assertEquals(23, maxIntFL(List(1, 16, 4, 0, 23, 9)), 0)

@@ -17,10 +17,13 @@ import scala.annotation.tailrec
       case Nil => sys.error("Your list is Nil!")
       case Cons(_,Cons(h,t)) => Cons(h,t)
     */
-    def head[A](l:List[A]):List[A] = l match
+    /*def head[A](l:List[A]):List[A] = l match
       case Nil => throw new NoSuchElementException("head of empty list")
       case Cons(h,_) => Cons(h, Nil)
-
+    */
+    def head[A](l:List[A]):A = l match
+      case Nil => throw new NoSuchElementException("head of empty list")
+      case Cons(h,_) => h
     def tail[A](l:List[A]):List[A] = l match
       case Nil => sys.error("Your list is Nil!")
       case Cons(_,t) => t
@@ -98,7 +101,7 @@ import scala.annotation.tailrec
     def incrementEachFr(l:List[Int]):List[Int] =
       foldRight(l, Nil:List[Int], (x, acc) => Cons(x+1, acc))
 
-    //Ex 3.17
+    //Ex 3.17 - Double to String
     def dToS(l : List[Double]): List[String] = l match
       case Nil => Nil
       case Cons(x, xs) => Cons(x.toString, dToS(xs))
@@ -145,7 +148,7 @@ import scala.annotation.tailrec
       case (Cons(x, xs), Cons(y, ys)) => Cons(x + y, addPairWise1(xs, ys))
 
     //Ex 3.23
-    def combine[A,B,C](l1: List[A], l2: List[A], f: (A,A)=>A): List[A] = (l1, l2) match
+    def combine[A](l1: List[A], l2: List[A], f: (A,A)=>A): List[A] = (l1, l2) match
       case (Cons(x,xs), Cons(y,ys)) => Cons(f(x,y), combine(xs,ys,f))
       case (Nil, Cons(y, ys)) => Cons(y, combine(Nil, ys,f))
       case (Cons(x, xs), Nil) => Cons(x, combine(xs, Nil,f))
@@ -164,8 +167,6 @@ import scala.annotation.tailrec
         case (Cons(x, xs), Cons(y, ys)) => loop(xs,ys,Cons(f(x,y), acc))
       reverse(loop(l1,l2,Nil))
 
-
-
       //foldRight(l,Nil:List[A], )
     //Ex 3.12
     def reverse[A](as: List[A]) : List[A] =
@@ -180,12 +181,12 @@ import scala.annotation.tailrec
     //Extra exercises
     def myDelete[A](as: List[A], f: A => Boolean): List[A] = as match
       case Cons(h, t) => if f(h) then myDelete(t, f) else Cons(h, myDelete(t, f))
-      case Nil => Nil
+      case _ => Nil
     def take[A](as: List[A], n: Int): List[A] =
       if n <= 0 then Nil
       else as match
         case Cons(h, t) => Cons(h, take(t, n - 1))
-        case Nil => Nil
+        case _ => Nil
     def takeWhile[A](as: List[A], f: A => Boolean): List[A] = as match
       case Cons(h, t) if f(h) => Cons(h, takeWhile(t, f))
       case _ => Nil
@@ -203,6 +204,12 @@ import scala.annotation.tailrec
         case _ => true
       goForAll(as,pred,false)
 
+    def forAllFl[A](as: List[A], pred: A => Boolean): Boolean =
+      foldLeft(reverse(as), false, (_,y) => pred(y))
+
+    def forAllFr[A](as: List[A], pred: A => Boolean): Boolean =
+      foldRight(as, false, (x, _) => pred(x))
+
     def exists1[A](as: List[A], pred: A => Boolean): Boolean = as match
       case Cons(h, _) if pred(h) => true
       case Cons(_, t) => exists1(t, pred)
@@ -219,6 +226,9 @@ import scala.annotation.tailrec
         case _ => false
       goExists(as, pred, false)
 
+    def reduce[A](l: List[A], f:(A,A)=> A): A =
+      foldLeft(l, head(l), f)
+
     //Ex 3.24
     def hasSubSequence[A](sup: List[A], sub: List[A]): Boolean =
       @tailrec
@@ -232,10 +242,36 @@ import scala.annotation.tailrec
     @tailrec
     def startsWith[A](l: List[A], prefix: List[A]): Boolean = (l, prefix) match
       case (_, Nil) => true
-      case (Cons(h,t), Cons(h2, t2)) if h == h2 => startsWith(t, t2)
+      case (Cons(h1,t1), Cons(h2, t2)) if h1 == h2 => startsWith(t1, t2)
       case _ => false
     @tailrec
     def hasSubSequenceBook[A](sup: List[A], sub: List[A]): Boolean = sup match
       case Nil => sub == Nil
       case _ if startsWith(sup, sub) => true
-      case Cons(h,t) => hasSubSequenceBook(t, sub)
+      case Cons(_,t) => hasSubSequenceBook(t, sub)
+
+    def zipRight[A](l:List[A]): List[(A,Int)] =
+      def goZip[A](l:List[A], n:Int): List[(A,Int)] = l match
+        case Cons(h, t) => Cons((h, n) , goZip(t,n+1))
+        case Nil => Nil
+      goZip(l,0)
+
+    //Recap exercise after average in Prolog (panic)!
+    def mean(l:List[Double]):Double =
+      @annotation.tailrec
+      def goMean (l:List[Double], acc:Double, count:Int):Double = l match
+        case Nil => acc / count
+        case Cons(h,t) => goMean(t, acc+h,count+1)
+      goMean(l, 0, 0)
+
+    def maxInt(l:List[Int]):Int =
+      @annotation.tailrec
+      def goMax(l:List[Int], currMax:Int):Int = l match
+        case Nil => currMax
+        case Cons(h,t) if h > currMax => goMax(t, h)
+        case Cons(_,t) => goMax (t, currMax) //purely functional (no if then else)
+      goMax(l, Int.MinValue)
+
+    def maxIntFL(l:List[Int]):Int =
+      foldLeft(l, Int.MinValue, (max,x) => if x > max then x else max)
+      

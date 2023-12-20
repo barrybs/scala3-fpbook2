@@ -43,7 +43,7 @@ class OptionTest:
 
   @Test
   def testVariance =
-    assertEquals(Some(2,5), variance(valuesSeq))
+    assertEquals(Some(2.0), variance(valuesSeq))
 
   @Test
   def testMap2 =

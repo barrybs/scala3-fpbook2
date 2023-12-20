@@ -5,6 +5,7 @@ ThisBuild / scalaVersion := "3.3.0"
 lazy val root = (project in file("."))
   .settings(
     name := "scala3-fpbook2",
+
     //libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % "Test",
     libraryDependencies +="com.github.sbt" % "junit-interface" % "0.13.3" % Test
   )
